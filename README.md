@@ -30,7 +30,7 @@
 ### LIRI Welcome
 ![LIRI Welcome](./Movies-of-App/Node_Liri_Welcome.gif)
 ### Spotify this Song
-[![Spotify this Song](./Movies-of-App/Spotify-this-Song.mp4)]
+(./Movies-of-App/Spotify-this-Song.mp4)
 ### Concert This
 ![Concert This](./Movies-of-App/Concert-this.mp4)
 ### Movie This
