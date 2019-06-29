@@ -38,7 +38,7 @@ inquirer
             default: "The Sign by Ace of Base"
         },
     ]).then(function(answers) {
-spotify.search({ type: 'artist,track', query: answers.song }, function(err, response) {
+spotify.search({ type: 'artist,track', query: answers.song, limit: 5}, function(err, response) {
   if (err) {
     return console.log('Error occurred: ' + err);
   }
@@ -94,6 +94,8 @@ spotify.search({ type: 'artist,track', query: answers.song }, function(err, resp
                     response.Rated + "\nImdb Rating: " + response.data.imdbRating + "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\nCountry: " + response.data.Country + "\nLanguage: " + response.data.Language + "\nPlot: " + response.data.Plot + "\nActors and Actresses: " + response.data.Actors +
                     
                     "\n--------------------------------";
+  
+                    
                     console.log(movie);
                  
                 }
@@ -105,14 +107,22 @@ spotify.search({ type: 'artist,track', query: answers.song }, function(err, resp
             }) 
         
         };
-        
-        // showMovie();
 
 // LIRI will take the text inside ramdom.txt and use it to call one of LIRI's commands
 function doIt() {
-fs.readFile("random.txt", "utf8", function (error, data) {
-    if (error) {
-        return console.log(error);
-    }
-})
-}
+    fs.readFile("random.txt", "utf8", function (error, data) {
+        if (error) {
+            return console.log(error);
+        }
+    var dataArr = data.split(",");
+
+    spotify.search({ type: 'artist,track', query: dataArr[1], limit: 5}, function(err, response) {
+        if (err) {
+          return console.log('Error occurred: ' + err);
+        }
+        var songs = "---------------------------------" + "\nArtist(s): " + response.tracks.items[0].artists[0].name + "\nSong Name: " + response.tracks.items[0].name + "\nAlbum Name: " + response.tracks.items[0].album.name + "\nPreview Link: " + response.tracks.items[0].external_urls.spotify +
+        "\n--------------------------";
+        console.log(songs);
+        });
+    })
+};
