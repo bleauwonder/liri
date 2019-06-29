@@ -27,7 +27,7 @@
 ### do-what-it-says will bring you back a special song from Spotify!
 
 ## See it in action:
-
+![LIRI Welcome] (./Movies-of-App/Node_Liri_Welcome.gif)
 
 ### The technologies used in this app:
 #### node.js

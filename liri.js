@@ -65,19 +65,19 @@ function spotifyThis() {
                 },
             ]).then(function(answers) {
                 axios.get("https://rest.bandsintown.com/artists/" + answers.concert + "/events?app_id=" + bandsintown)
-            .then(function (response) {
-                for (var i = 0; i < 5; i++) {
-                    let concerts = "----------------------------------" + "\nVenue Name: " + response.data[i].venue.name + "\nVenue Location: " + response.data[i].venue.city + "\nDate of the Event: " + 
-                    moment(response.data[i].datetime).format("MM/DD/YYYY") + "\n--------------------------------";
-                    console.log(concerts);
-                    fs.appendFile("log.txt", concerts, function(err) {
-                        if (err) {
-                          if (err) throw err;
-                          console.log(concerts);
+                    .then(function (response) {
+                        for (var i = 0; i < 5; i++) {
+                            let concerts = "----------------------------------" + "\nVenue Name: " + response.data[i].venue.name + "\nVenue Location: " + response.data[i].venue.city + "\nDate of the Event: " + 
+                            moment(response.data[i].datetime).format("MM/DD/YYYY") + "\n--------------------------------";
+                            console.log(concerts);
+                            fs.appendFile("log.txt", concerts, function(err) {
+                                if (err) {
+                                if (err) throw err;
+                                console.log(concerts);
+                                }
+                            })
                         }
                     })
-                }
-            })
             .catch(function(error) {
                 console.log(error);
             });
