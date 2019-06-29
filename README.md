@@ -6,7 +6,7 @@
 
 ### This app is organized by choosing to Spotify a song and gather some info, find a concert near you with Bands In Town and logistics, find info about your favorite movie using OMDB, or have LIRI find you a special song.
 
-#--------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 
 ### To start, type "node liri" into your terminal.
 
@@ -27,7 +27,16 @@
 ### do-what-it-says will bring you back a special song from Spotify!
 
 ## See it in action:
+### LIRI Welcome
 ![LIRI Welcome](./Movies-of-App/Node_Liri_Welcome.gif)
+### Spotify this Song
+![Spotify this Song](./Movies-of-App/Spotify-this-Song.mp4)
+### Concert This
+![Concert This](./Movies-of-App/Concert-this.mp4)
+### Movie This
+![Concert This](./Movies-of-App/movie-this.mp4)
+### Do What LIRI Says
+![Do What It Says](./Movies-of-App/do-what-it-says.mp4)
 
 ### The technologies used in this app:
 #### node.js
