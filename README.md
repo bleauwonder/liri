@@ -1,4 +1,4 @@
-# liri
+# LIRI
 
 ### SIRI has been an interesting invention. She is a Speech Interpretatin and Recognition Interface who listens to what we want and makes it happen. But she sure doesn't do what I want in my terminal! 
 
@@ -20,17 +20,17 @@
 ### For instance, if you want information about a song, type: node liri spotify-this-song
 
 ### LIRI will then ask you, "What song do you want to know about?" Type what song you are curious about and press enter!
-#### Spotify will retrieve one choice for the song queried.
+####            Spotify will retrieve one choice for the song queried.
 
 ### The same goes for "node liri concert-this" and "node liri movie-this"
 
 ### do-what-it-says will bring you back a special song from Spotify!
-
+---------------------------------------------------------------------------------------
 ## See it in action:
 ### LIRI Welcome
 ![LIRI Welcome](./Movies-of-App/Node_Liri_Welcome.gif)
 ### Spotify this Song
-![Spotify this Song](./Movies-of-App/Spotify-this-Song.mp4)
+[![Spotify this Song](./Movies-of-App/Spotify-this-Song.mp4)]
 ### Concert This
 ![Concert This](./Movies-of-App/Concert-this.mp4)
 ### Movie This
