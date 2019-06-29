@@ -1,5 +1,6 @@
 require('dotenv').config();
 var inquirer = require('inquirer');
+var fs = require('fs');
 
 var moment = require('moment');
 var axios = require('axios');
@@ -11,7 +12,6 @@ var omdb = (keys.oK);
 var bandsintown = (keys.bITK);
 
 
-var fs = require('fs');
 
 var liriQuery = process.argv[2];
 
@@ -24,29 +24,33 @@ if (liriQuery === "concert-this") {
 } else if (liriQuery === "do-what-it-says") {
     doIt();
 } else {
-    console.log("Welcome to LIRI! Please enter node liri.js and one of the following commands: concert-this, spotify-this-song, movie-this, do-what-it-says.");
+    console.log("Welcome to LIRI! Please enter 'node liri' and one of the following commands: concert-this, spotify-this-song, movie-this, do-what-it-says.");
 }
 
- 
 // LIRI will look for a song from the Spotify API
 function spotifyThis() {
-inquirer
-    .prompt([
-        {
-            name: 'song',
-            message: "What song do you want to know about?",
-            default: "The Sign by Ace of Base"
-        },
-    ]).then(function(answers) {
-spotify.search({ type: 'artist,track', query: answers.song, limit: 5}, function(err, response) {
-  if (err) {
-    return console.log('Error occurred: ' + err);
-  }
-  var songs = "---------------------------------" + "\nArtist(s): " + response.tracks.items[0].artists[0].name + "\nSong Name: " + response.tracks.items[0].name + "\nAlbum Name: " + response.tracks.items[0].album.name + "\nPreview Link: " + response.tracks.items[0].external_urls.spotify +
-  "\n--------------------------";
-  console.log(songs);
-
+    inquirer
+        .prompt([
+            {
+                name: 'song',
+                message: "What song do you want to know about?",
+                default: "The Sign by Ace of Base"
+            },
+        ]).then(function(answers) {
+    spotify.search({ type: 'artist,track', query: answers.song, limit: 5}, function(err, response) {
+        if (err) {
+            return console.log('Error occurred: ' + err);
+        }
+    var songs = "---------------------------------" + "\nArtist(s): " + response.tracks.items[0].artists[0].name + "\nSong Name: " + response.tracks.items[0].name + "\nAlbum Name: " + response.tracks.items[0].album.name + "\nPreview Link: " + response.tracks.items[0].external_urls.spotify +
+    "\n--------------------------";
+    console.log(songs);
+        fs.appendFile("log.txt", songs, function(err) {
+            if (err) {
+            if (err) throw err;
+                console.log(songs);
+            }
         })
+    })
     })
 };
 
@@ -66,7 +70,12 @@ spotify.search({ type: 'artist,track', query: answers.song, limit: 5}, function(
                     let concerts = "----------------------------------" + "\nVenue Name: " + response.data[i].venue.name + "\nVenue Location: " + response.data[i].venue.city + "\nDate of the Event: " + 
                     moment(response.data[i].datetime).format("MM/DD/YYYY") + "\n--------------------------------";
                     console.log(concerts);
-                 
+                    fs.appendFile("log.txt", concerts, function(err) {
+                        if (err) {
+                          if (err) throw err;
+                          console.log(concerts);
+                        }
+                    })
                 }
             })
             .catch(function(error) {
@@ -75,8 +84,6 @@ spotify.search({ type: 'artist,track', query: answers.song, limit: 5}, function(
         
             })
         };
-        
-        // showConcert();
         
 // LIRI will find the movie from the OMDB API
     function showMovie () {
@@ -94,9 +101,13 @@ spotify.search({ type: 'artist,track', query: answers.song, limit: 5}, function(
                     response.Rated + "\nImdb Rating: " + response.data.imdbRating + "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\nCountry: " + response.data.Country + "\nLanguage: " + response.data.Language + "\nPlot: " + response.data.Plot + "\nActors and Actresses: " + response.data.Actors +
                     
                     "\n--------------------------------";
-  
-                    
                     console.log(movie);
+                    fs.appendFile("log.txt", movie, function(err) {
+                        if (err) {
+                          if (err) throw err;
+                          console.log(movie);
+                        }
+                    })
                  
                 }
             )

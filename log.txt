@@ -1,0 +1,71 @@
+----------------------------------
+Venue Name: Tinderbox
+Venue Location: Odense
+Date of the Event: 06/29/2019
+------------------------------------------------------------------
+Venue Name: Mission Ballroom
+Venue Location: Denver
+Date of the Event: 08/07/2019
+------------------------------------------------------------------
+Venue Name: Splendour In The Grass
+Venue Location: Byron Bay
+Date of the Event: 07/21/2019
+------------------------------------------------------------------
+Venue Name: Osheaga Music Festival
+Venue Location: Montreal
+Date of the Event: 08/02/2019
+------------------------------------------------------------------
+Venue Name: Enmore Theatre
+Venue Location: Newtown
+Date of the Event: 07/22/2019
+------------------------------------------------------------------
+Movie Name: Misery
+Movie Year: 1990
+Movie Rating: undefined
+Imdb Rating: 7.8
+Rotten Tomatoes Rating: 90%
+Country: USA
+Language: English
+Plot: After a famous author is rescued from a car crash by a fan of his novels, he comes to realize that the care he is receiving is only the beginning of a nightmare of captivity and abuse.
+Actors and Actresses: James Caan, Kathy Bates, Richard Farnsworth, Frances Sternhagen
+------------------------------------------------------------------
+Movie Name: Misery
+Movie Year: 1990
+Movie Rating: undefined
+Imdb Rating: 7.8
+Rotten Tomatoes Rating: 90%
+Country: USA
+Language: English
+Plot: After a famous author is rescued from a car crash by a fan of his novels, he comes to realize that the care he is receiving is only the beginning of a nightmare of captivity and abuse.
+Actors and Actresses: James Caan, Kathy Bates, Richard Farnsworth, Frances Sternhagen
+------------------------------------------------------------------
+Venue Name: Tinderbox
+Venue Location: Odense
+Date of the Event: 06/29/2019
+------------------------------------------------------------------
+Venue Name: Splendour In The Grass
+Venue Location: Byron Bay
+Date of the Event: 07/21/2019
+------------------------------------------------------------------
+Venue Name: Enmore Theatre
+Venue Location: Newtown
+Date of the Event: 07/22/2019
+------------------------------------------------------------------
+Venue Name: Osheaga Music Festival
+Venue Location: Montreal
+Date of the Event: 08/02/2019
+------------------------------------------------------------------
+Venue Name: Mission Ballroom
+Venue Location: Denver
+Date of the Event: 08/07/2019
+-----------------------------------------------------------------
+Artist(s): The Lumineers
+Song Name: Ophelia
+Album Name: Cleopatra
+Preview Link: https://open.spotify.com/track/3d8y0t70g7hw2FOWl9Z4Fm
+-----------------------------------------------------------
+Artist(s): Gang of Youths
+Song Name: The Heart Is a Muscle - Radio Edit
+Album Name: The Heart Is a Muscle (Radio Edit)
+Preview Link: https://open.spotify.com/track/5DlQetNIPiALnYuM3BFgRz
+--------------------------
