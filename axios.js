@@ -1,7 +1,10 @@
+require('dotenv').config();
 var inquirer = require('inquirer');
 var moment = require('moment');
 var axios = require('axios');
 var spotify = new Spotify(keys.spotify);
+var Spotify = require('node-spotify-api');
+var keys = require('./keys.js');
 
 var showConcert = function() {
 inquirer
