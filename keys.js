@@ -1,4 +1,4 @@
-console.log('this is loaded');
+// console.log('this is loaded');
 
 exports.spotify = {
     id: process.env.spotifyId,
@@ -7,10 +7,9 @@ exports.spotify = {
     
 };
 
-exports.oK = {
-    id: process.env.omdbKey
-}
 
-exports.bITK = {  
-    id: process.env.bandsInTownKey
-}
+exports.oK = process.env.omdbKey;
+
+
+exports.bITK = process.env.bandsInTownKey;
+

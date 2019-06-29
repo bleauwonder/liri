@@ -4,12 +4,12 @@ var inquirer = require('inquirer');
 var moment = require('moment');
 var axios = require('axios');
 
-var omdb = (keys.omdb);
-var bandsintown = (keys.bandsintown);
-
 var keys = require('./keys.js');
 var Spotify = require('node-spotify-api');
 var spotify = new Spotify(keys.spotify);
+var omdb = (keys.oK);
+var bandsintown = (keys.bITK);
+
 
 var fs = require('fs');
 
@@ -24,7 +24,7 @@ if (liriQuery === "concert-this") {
 } else if (liriQuery === "do-what-it-says") {
     doIt();
 } else {
-    console.log("What on earth are you writing? Please enter one of the following commands: my-tweets, spotify-this-song, movie-this, do-what-it-says.");
+    console.log("Welcome to LIRI! Please enter node liri.js and one of the following commands: concert-this, spotify-this-song, movie-this, do-what-it-says.");
 }
 
  
