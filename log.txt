@@ -68,4 +68,9 @@ Artist(s): Gang of Youths
 Song Name: The Heart Is a Muscle - Radio Edit
 Album Name: The Heart Is a Muscle (Radio Edit)
 Preview Link: https://open.spotify.com/track/5DlQetNIPiALnYuM3BFgRz
+-----------------------------------------------------------
+Artist(s): Harry Styles
+Song Name: Sign of the Times
+Album Name: Harry Styles
+Preview Link: https://open.spotify.com/track/5Ohxk2dO5COHF1krpoPigN
 --------------------------
