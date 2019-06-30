@@ -11,8 +11,6 @@ var spotify = new Spotify(keys.spotify);
 var omdb = (keys.oK);
 var bandsintown = (keys.bITK);
 
-
-
 var liriQuery = process.argv[2];
 
 if (liriQuery === "concert-this") {
@@ -55,69 +53,68 @@ function spotifyThis() {
 };
 
 // LIRI will look for concerts from the Bands In Town API
-    function showConcert() {
-        inquirer
-            .prompt([
-                {
-                    name: 'concert',
-                    message: "What artist do you want to see?",
-                    default: "The Cure"
-                },
-            ]).then(function(answers) {
-                axios.get("https://rest.bandsintown.com/artists/" + answers.concert + "/events?app_id=" + bandsintown)
-                    .then(function (response) {
-                        for (var i = 0; i < 5; i++) {
-                            let concerts = "----------------------------------" + "\nVenue Name: " + response.data[i].venue.name + "\nVenue Location: " + response.data[i].venue.city + "\nDate of the Event: " + 
-                            moment(response.data[i].datetime).format("MM/DD/YYYY") + "\n--------------------------------";
+function showConcert() {
+    inquirer
+        .prompt([
+            {
+                name: 'concert',
+                message: "What artist do you want to see?",
+                default: "The Cure"
+            },
+        ]).then(function(answers) {
+            axios.get("https://rest.bandsintown.com/artists/" + answers.concert + "/events?app_id=" + bandsintown)
+                .then(function (response) {
+                    for (var i = 0; i < 5; i++) {
+                        let concerts = "----------------------------------" + "\nVenue Name: " + response.data[i].venue.name + "\nVenue Location: " + response.data[i].venue.city + "\nDate of the Event: " + 
+                        moment(response.data[i].datetime).format("MM/DD/YYYY") + "\n--------------------------------";
+                        console.log(concerts);
+                        fs.appendFile("log.txt", concerts, function(err) {
+                            if (err) {
+                            if (err) throw err;
                             console.log(concerts);
-                            fs.appendFile("log.txt", concerts, function(err) {
-                                if (err) {
-                                if (err) throw err;
-                                console.log(concerts);
-                                }
-                            })
-                        }
-                    })
-            .catch(function(error) {
-                console.log(error);
-            });
-        
-            })
-        };
+                            }
+                        })
+                    }
+                })
+        .catch(function(error) {
+            console.log(error);
+        });
+    })
+};
         
 // LIRI will find the movie from the OMDB API
-    function showMovie () {
-        inquirer
-            .prompt([
-                {
-                    name: 'movie',
-                    message: "What movie to you want to know more about?",
-                    default: "The Shining"
-                },
-            ]).then(function(answers) {
-                axios.get("http://www.omdbapi.com/?t=" + answers.movie + "&y=&plot=short&apikey=" + omdb)
-            .then(function (response) {
-                    let movie = "----------------------------------" + "\nMovie Name: " + response.data.Title + "\nMovie Year: " + response.data.Year + "\nMovie Rating: " + 
-                    response.Rated + "\nImdb Rating: " + response.data.imdbRating + "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\nCountry: " + response.data.Country + "\nLanguage: " + response.data.Language + "\nPlot: " + response.data.Plot + "\nActors and Actresses: " + response.data.Actors +
-                    
-                    "\n--------------------------------";
-                    console.log(movie);
-                    fs.appendFile("log.txt", movie, function(err) {
-                        if (err) {
-                          if (err) throw err;
-                          console.log(movie);
-                        }
-                    })
-                 
-                }
-            )
-            .catch(function(error) {
-                console.log(error);
-            });
-        
-            }) 
-        
-        };
+function showMovie () {
+    inquirer
+        .prompt([
+            {
+                name: 'movie',
+                message: "What movie to you want to know more about?",
+                default: "The Shining"
+            },
+        ]).then(function(answers) {
+            axios.get("http://www.omdbapi.com/?t=" + answers.movie + "&y=&plot=short&apikey=" + omdb)
+        .then(function (response) {
+                let movie = "----------------------------------" + "\nMovie Name: " + response.data.Title + "\nMovie Year: " + response.data.Year + "\nMovie Rating: " + 
+                response.Rated + "\nImdb Rating: " + response.data.imdbRating + "\nRotten Tomatoes Rating: " + response.data.Ratings[1].Value + "\nCountry: " + response.data.Country + "\nLanguage: " + response.data.Language + "\nPlot: " + response.data.Plot + "\nActors and Actresses: " + response.data.Actors +
+                
+                "\n--------------------------------";
+                console.log(movie);
+                fs.appendFile("log.txt", movie, function(err) {
+                    if (err) {
+                        if (err) throw err;
+                        console.log(movie);
+                    }
+                })
+                
+            }
+        )
+        .catch(function(error) {
+            console.log(error);
+        });
+    
+        }) 
+    
+    };
 
 // LIRI will take the text inside ramdom.txt and use it to call one of LIRI's commands
 function doIt() {
