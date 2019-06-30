@@ -30,13 +30,13 @@
 ### LIRI Welcome
 ![LIRI Welcome](./Movies-of-App/Node_Liri_Welcome.gif)
 ### Spotify this Song
-(./Movies-of-App/Spotify-this-Song.mp4)
+![Spotify this Song](./Movies-of-App/Spotify-this-Song.mp4)
 ### Concert This
 ![Concert This](./Movies-of-App/Concert-this.mp4)
 ### Movie This
 ![Concert This](./Movies-of-App/movie-this.mp4)
 ### Do What LIRI Says
-![Do What It Says](./Movies-of-App/do-what-it-says.mp4)
+![Do What It Says](./Movies-of-App/do-what-it-says.gif)
 
 ### The technologies used in this app:
 #### node.js
