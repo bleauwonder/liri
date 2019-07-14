@@ -133,4 +133,14 @@ Country: USA
 Language: English
 Plot: After a famous author is rescued from a car crash by a fan of his novels, he comes to realize that the care he is receiving is only the beginning of a nightmare of captivity and abuse.
 Actors and Actresses: James Caan, Kathy Bates, Richard Farnsworth, Frances Sternhagen
---------------------------------
+-----------------------------------------------------------------
+Artist(s): The Lumineers
+Song Name: Ophelia
+Album Name: Cleopatra
+Preview Link: https://open.spotify.com/track/3d8y0t70g7hw2FOWl9Z4Fm
+-----------------------------------------------------------
+Artist(s): U2
+Song Name: Sunday Bloody Sunday - Remastered 2008
+Album Name: War (Remastered)
+Preview Link: https://open.spotify.com/track/6C4LXC9UFH1IKiHYOp0BiJ
+--------------------------
